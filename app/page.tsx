@@ -1,32 +1,25 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 text-center gap-6">
-      <h1 className="text-4xl font-bold">OpenAnaesthesia AI</h1>
-      <p className="text-lg max-w-xl">
-        Evidence-based answers for real-world anaesthesia.
-      </p>
-      <nav className="flex flex-col sm:flex-row gap-4 mt-6">
-        <Link
-          href="/about"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
-          About
-        </Link>
-        <Link
-          href="/sources"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
-          Sources
-        </Link>
-        <Link
-          href="/ask"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
-          Ask a Question
-        </Link>
+    <main className="min-h-screen bg-black text-white font-sans flex flex-col">
+      {/* Navigation Bar */}
+      <nav className="w-full flex items-center justify-between px-6 py-4 border-b border-gray-800 sticky top-0 bg-black z-50">
+        <h1 className="text-2xl font-semibold tracking-tight">OpenAnaesthesia AI</h1>
+        <div className="space-x-6 text-sm">
+          <a href="#" className="hover:text-gray-400 transition">Docs</a>
+          <a href="#" className="hover:text-gray-400 transition">About</a>
+          <a href="#" className="hover:text-gray-400 transition">GitHub</a>
+        </div>
       </nav>
+
+      {/* Hero Section */}
+      <section className="flex-grow flex flex-col justify-center items-center text-center px-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          OpenAnaesthesia AI
+        </h2>
+        <p className="text-lg md:text-xl text-gray-300 max-w-xl">
+          Evidence-based answers for real-world anaesthesia.
+        </p>
+      </section>
     </main>
   );
 }
